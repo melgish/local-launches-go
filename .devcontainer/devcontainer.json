@@ -1,0 +1,20 @@
+{
+	"name": "Go",
+	"image": "mcr.microsoft.com/devcontainers/go:1-1.24-bookworm",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+			"moby": true,
+			"installDockerBuildx": true,
+			"installDockerComposeSwitch": true,
+			"version": "latest",
+			"dockerDashComposeVersion": "v2"
+		}
+	},
+	"containerEnv": {
+		"HTTP_PORT": "8080",
+		"REFRESH_INTERVAL": "4h",
+		"LOG_REQUESTS": "true"
+	},
+	// Server Port, Debugger Port
+	"forwardPorts": [ 8080, 2345 ]
+}

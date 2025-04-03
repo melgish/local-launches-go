@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Yantramanav";
+  src: url("./Yantramanav-Regular.ttf") format("truetype");
+}
+
+:root {
+  --hue: 220;
+  --sat: 20%;
+  --border: 1px solid hsl(var(--hue), var(--sat), 25%);
+  --header-background-color: hsl(var(--hue), 65%, 50%);
+  --header-color: hsl(var(--hue), 65%, 90%);
+  --header-text-shadow: 2px 2px 2px hsl(var(--hue), 65%, 0%);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+body {
+  overflow: hidden;
+
+  color: hsl(var(--hue), var(--sat), 10%);
+
+  font-family: "Yantramanav", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.2;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 0;
+}
+
+header, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.5rem 1rem;
+
+  background-color: var(--header-background-color);
+  color: var(--header-color);
+  font-variant: small-caps;
+  text-shadow: var(--header-text-shadow);
+}
+
+header > :first-child {
+  /* style the app title */
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+header > :last-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header > :last-child svg {
+  fill: var(--header-color, white);
+  width: 28px;
+  height: 28px;
+}
+
+main {
+  overflow-y: auto;
+  padding: 0.5rem 0.75rem;
+
+  background: linear-gradient(
+    hsl(var(--hue), var(--sat), 75%),
+    hsl(var(--hue), var(--sat), 50%));
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  /* Match header / footer */
+  background-color: var(--header-background-color);
+  color: var(--header-color);
+  font-variant: small-caps;
+  text-shadow: var(--header-text-shadow);
+}
+
+tbody tr:nth-child(odd) {
+  background: hsl(var(--hue), var(--sat), 85%);
+  border-top: var(--border);
+}
+
+tbody tr:nth-child(even) {
+  background: hsl(var(--hue), var(--sat), 95%);
+}
+
+thead, tbody {
+  border: var(--border);
+}
+
+th, td {
+  text-align: left;
+  padding: 0.25rem;
+}
+
+td[colspan="4"] {
+  padding: 0.75rem;
+}
+
+a:visited {
+  color: currentColor;
+}
+

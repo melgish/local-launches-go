@@ -1,14 +1,14 @@
 module local-launches
 
-go 1.23.7
+go 1.24.3
 
 require (
 	github.com/antchfx/htmlquery v1.3.4
-	golang.org/x/net v0.38.0
+	golang.org/x/net v0.40.0
 )
 
 require (
-	github.com/antchfx/xpath v1.3.3 // indirect
-	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
-	golang.org/x/text v0.23.0 // indirect
+	github.com/antchfx/xpath v1.3.4 // indirect
+	github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8 // indirect
+	golang.org/x/text v0.25.0 // indirect
 )
